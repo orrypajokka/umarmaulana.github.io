@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Umar Maulana - Full Stack Developer & Photographer</title>
+    <meta name="description" content="Portfolio Umar Maulana - Full Stack Web Developer & Photographer. Membangun website modern dan mengabadikan momen berharga.">
+    <meta name="keywords" content="web developer, photographer, full stack, portfolio, website, photography">
+    <meta name="author" content="Umar Maulana">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Umar Maulana - Full Stack Developer & Photographer">
+    <meta property="og:description" content="Membangun website modern & mengabadikan momen berharga.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://umarmaulana.com">
+    <meta property="og:image" content="https://umarmaulana.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Umar Maulana - Full Stack Developer & Photographer">
+    <meta name="twitter:description" content="Membangun website modern & mengabadikan momen berharga.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Native Cross-Document View Transitions (Chromium 126+) -->
+    <!-- Mengaktifkan animasi transisi bawaan browser antar halaman same-origin. -->
+    <!-- Browser yang belum mendukung akan mengabaikan tag ini tanpa error (progressive enhancement). -->
+    <meta name="view-transition" content="same-origin">
+</head>
+<body>
+    <!-- ================================================================
+    LOADING SCREEN
+    ================================================================ -->
+    <div id="loading-screen" role="status" aria-label="Loading">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- ================================================================
+    NAVIGATION
+    ================================================================ -->
+    <header class="navbar" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="logo" aria-label="Umar Maulana Home">
+                <span class="logo-text">UM</span>
+                <span class="logo-dot"></span>
+            </a>
+            
+            <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active" aria-current="page">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#photography">Photography</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================================================================
+    MAIN CONTENT
+    Dibungkus <main id="page-content"> agar:
+    1) Memenuhi landmark accessibility yang sebelumnya hilang.
+    2) Menjadi satu target tunggal yang jelas untuk sistem transisi
+       halaman (native View Transitions API & fallback JS), tanpa
+       ikut menganimasikan navbar/footer yang bersifat persisten.
+    Tidak ada CSS baru yang ditambahkan pada elemen ini sehingga
+    tampilan visual tetap 100% identik dengan sebelumnya.
+    ================================================================ -->
+    <main id="page-content">
+
+    <!-- ================================================================
+    HERO SECTION
+    ================================================================ -->
+    <section id="home" class="hero" aria-label="Hero Section">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1 class="hero-title">Umar Maulana</h1>
+                    <div class="hero-typing">
+                        <span class="typing-text" aria-label="Typing animation"></span>
+                        <span class="typing-cursor" aria-hidden="true">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Full Stack Web Developer &amp; Photographer. 
+                        Building modern websites &amp; capturing meaningful moments.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn-primary">View My Work</a>
+                        <a href="#contact" class="btn-outline">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img 
+                            src="assets/img/umar 1.jpeg" 
+                            alt="Umar Maulana - Full Stack Developer & Photographer"
+                            loading="lazy"
+                            width="600"
+                            height="600"
+                        >
+                        <div class="hero-image-badge">
+                            <span class="badge-dot"></span>
+                            Available for work
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <span class="scroll-line"></span>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    ABOUT SECTION
+    ================================================================ -->
+    <section id="about" class="section about" aria-label="About Section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">About Me</span>
+                <h2>Building Digital Experiences &amp; Telling Stories Through Lens</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <p class="about-text">
+                        I'm a <strong>Full Stack Web Developer</strong> and <strong>Photographer</strong> 
+                        based in Indonesia with a passion for creating beautiful, functional digital 
+                        experiences and capturing meaningful moments through photography.
+                    </p>
+                    <p class="about-text">
+                        With expertise in both web development and photography, I bring a unique 
+                        perspective to every project — combining technical precision with artistic vision.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="30">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn-outline">Read More</a>
+                </div>
+                <div class="about-image fade-in">
+                    <img 
+                        src="assets/img/umar about.jpeg" 
+                        alt="Umar Maulana - About"
+                        loading="lazy"
+                        width="500"
+                        height="600"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    STATS SECTION
+    ================================================================ -->
+    <section class="section stats" aria-label="Statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">+ Projects</span>
+                    <p class="stat-desc">Websites &amp; applications delivered</p>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-label">+ Industries</span>
+                    <p class="stat-desc">Diverse business sectors served</p>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-target="55">0</span>
+                    <span class="stat-label">+ Websites</span>
+                    <p class="stat-desc">Landing pages &amp; full websites</p>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number" data-target="49">4.9</span>
+                    <span class="stat-label">★ Rating</span>
+                    <p class="stat-desc">Client satisfaction score</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    SERVICES SECTION
+    ================================================================ -->
+    <section id="services" class="section services" aria-label="Services Section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-label">What I Do</span>
+                <h2>Services I Offer</h2>
+                <p class="section-subtitle">From concept to launch — creating digital and visual experiences</p>
+            </div>
+            <div class="services-grid">
+                <!-- Web Development -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 16L2 12L6 8" />
+                            <path d="M18 8L22 12L18 16" />
+                            <path d="M14 4L10 20" />
+                        </svg>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites, landing pages, company profiles, and full-stack web applications.</p>
+                    <ul class="service-features">
+                        <li>Landing Page</li>
+                        <li>Company Profile</li>
+                        <li>Dashboard</li>
+                        <li>POS System</li>
+                    </ul>
+                </div>
+
+                <!-- Photography -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 3H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" />
+                            <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z" />
+                        </svg>
+                    </div>
+                    <h3>Photography</h3>
+                    <p>Professional photography services for weddings, portraits, and products.</p>
+                    <ul class="service-features">
+                        <li>Wedding</li>
+                        <li>Portrait</li>
+                        <li>Product</li>
+                        <li>Event</li>
+                    </ul>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design with focus on clean interfaces and smooth experiences.</p>
+                    <ul class="service-features">
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>User Research</li>
+                        <li>Design System</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    PORTFOLIO SECTION
+    ================================================================ -->
+    <section id="portfolio" class="section portfolio" aria-label="Portfolio Section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Portfolio</span>
+                <h2>Web Development Projects</h2>
+                <p class="section-subtitle">A selection of websites and applications I've built</p>
+            </div>
+            
+            <!-- Filter Tabs -->
+            <div class="portfolio-filter fade-in" role="tablist">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="filter-btn" data-filter="website" role="tab" aria-selected="false">Websites</button>
+                <button class="filter-btn" data-filter="dashboard" role="tab" aria-selected="false">Dashboards</button>
+                <button class="filter-btn" data-filter="landing" role="tab" aria-selected="false">Landing Pages</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item fade-in" data-category="website">
+                    <div class="portfolio-thumbnail">
+                        <img 
+                            src="assets/images/portfolio/project-1.jpg" 
+                            alt="Company Profile Website"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="view-project" data-project="1">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Modern Company Profile</h3>
+                        <p>Corporate website with clean design and smooth animations</p>
+                        <div class="portfolio-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item fade-in" data-category="dashboard">
+                    <div class="portfolio-thumbnail">
+                        <img 
+                            src="assets/images/portfolio/project-2.jpg" 
+                            alt="Analytics Dashboard"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="view-project" data-project="2">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time data dashboard with interactive charts</p>
+                        <div class="portfolio-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item fade-in" data-category="landing">
+                    <div class="portfolio-thumbnail">
+                        <img 
+                            src="assets/images/portfolio/project-3.jpg" 
+                            alt="Product Landing Page"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="view-project" data-project="3">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Product Landing Page</h3>
+                        <p>High-converting landing page with strong CTA</p>
+                        <div class="portfolio-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item fade-in" data-category="website">
+                    <div class="portfolio-thumbnail">
+                        <img 
+                            src="assets/images/portfolio/project-4.jpg" 
+                            alt="E-commerce Website"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="view-project" data-project="4">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-featured online store with payment integration</p>
+                        <div class="portfolio-tags">
+                            <span>PHP</span>
+                            <span>Bootstrap</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item fade-in" data-category="dashboard">
+                    <div class="portfolio-thumbnail">
+                        <img 
+                            src="assets/images/portfolio/project-5.jpg" 
+                            alt="POS System"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="view-project" data-project="5">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>POS System</h3>
+                        <p>Point of Sale system with inventory management</p>
+                        <div class="portfolio-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item fade-in" data-category="landing">
+                    <div class="portfolio-thumbnail">
+                        <img 
+                            src="assets/images/portfolio/project-6.jpg" 
+                            alt="Event Landing Page"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <button class="view-project" data-project="6">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Event Landing Page</h3>
+                        <p>Modern event page with countdown and registration</p>
+                        <div class="portfolio-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-cta text-center fade-in">
+                <a href="portfolio.html" class="btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    PHOTOGRAPHY SECTION
+    ================================================================ -->
+    <section id="photography" class="section photography" aria-label="Photography Section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Photography</span>
+                <h2>Capturing Moments</h2>
+                <p class="section-subtitle">A visual journey through my lens</p>
+            </div>
+
+            <!-- Photography Categories -->
+            <div class="photo-categories fade-in" role="tablist">
+                <button class="category-btn active" data-category="all" role="tab" aria-selected="true">All</button>
+                <button class="category-btn" data-category="wedding" role="tab" aria-selected="false">Wedding</button>
+                <button class="category-btn" data-category="portrait" role="tab" aria-selected="false">Portrait</button>
+                <button class="category-btn" data-category="product" role="tab" aria-selected="false">Product</button>
+            </div>
+
+            <!-- Masonry Gallery -->
+            <div class="photo-gallery">
+                <div class="photo-item fade-in" data-category="wedding">
+                    <img 
+                        src="assets/images/photography/wedding-1.jpg" 
+                        alt="Wedding Photography"
+                        loading="lazy"
+                        width="400"
+                        height="600"
+                    >
+                </div>
+                <div class="photo-item fade-in" data-category="portrait">
+                    <img 
+                        src="assets/images/photography/portrait-1.jpg" 
+                        alt="Portrait Photography"
+                        loading="lazy"
+                        width="400"
+                        height="300"
+                    >
+                </div>
+                <div class="photo-item fade-in" data-category="wedding">
+                    <img 
+                        src="assets/images/photography/wedding-2.jpg" 
+                        alt="Wedding Photography"
+                        loading="lazy"
+                        width="400"
+                        height="400"
+                    >
+                </div>
+                <div class="photo-item fade-in" data-category="product">
+                    <img 
+                        src="assets/images/photography/product-1.jpg" 
+                        alt="Product Photography"
+                        loading="lazy"
+                        width="400"
+                        height="500"
+                    >
+                </div>
+                <div class="photo-item fade-in" data-category="portrait">
+                    <img 
+                        src="assets/images/photography/portrait-2.jpg" 
+                        alt="Portrait Photography"
+                        loading="lazy"
+                        width="400"
+                        height="350"
+                    >
+                </div>
+                <div class="photo-item fade-in" data-category="product">
+                    <img 
+                        src="assets/images/photography/product-2.jpg" 
+                        alt="Product Photography"
+                        loading="lazy"
+                        width="400"
+                        height="450"
+                    >
+                </div>
+            </div>
+
+            <div class="photography-cta text-center fade-in">
+                <a href="photography.html" class="btn-outline">View Full Gallery</a>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-label="Image Lightbox" aria-hidden="true">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-prev" aria-label="Previous image">‹</button>
+            <button class="lightbox-next" aria-label="Next image">›</button>
+            <div class="lightbox-content">
+                <img src="" alt="" id="lightbox-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    SKILLS SECTION
+    ================================================================ -->
+    <section id="skills" class="section skills" aria-label="Skills Section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-label">Skills</span>
+                <h2>Technologies &amp; Tools</h2>
+                <p class="section-subtitle">The tools and technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Web Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Photography &amp; Design</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Photoshop</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Lightroom</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CorelDraw</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    EXPERIENCE SECTION
+    ================================================================ -->
+    <section id="experience" class="section experience" aria-label="Experience Section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-label">Experience</span>
+                <h2>Professional Journey</h2>
+                <p class="section-subtitle">My career path and milestones</p>
+            </div>
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h3>Full Stack Developer</h3>
+                        <p class="timeline-company">Freelance</p>
+                        <p>Building custom websites and web applications for clients across various industries.</p>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3>Web Developer</h3>
+                        <p class="timeline-company">Digital Agency</p>
+                        <p>Developed and maintained websites for corporate clients, focusing on performance and UX.</p>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 - 2021</span>
+                        <h3>Junior Developer</h3>
+                        <p class="timeline-company">Tech Startup</p>
+                        <p>Started professional journey building landing pages and web applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    TESTIMONIALS SECTION
+    ================================================================ -->
+    <section id="testimonials" class="section testimonials" aria-label="Testimonials Section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-label">Testimonials</span>
+                <h2>What Clients Say</h2>
+                <p class="section-subtitle">Feedback from people I've worked with</p>
+            </div>
+            <div class="testimonial-slider" role="region" aria-label="Testimonials carousel">
+                <div class="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <blockquote>
+                                "Umar built our company website from scratch. The result was beyond our expectations — modern, fast, and user-friendly. Highly recommended!"
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img 
+                                    src="assets/images/testimonials/client-1.jpg" 
+                                    alt="Client 1"
+                                    loading="lazy"
+                                    width="60"
+                                    height="60"
+                                >
+                                <div class="testimonial-info">
+                                    <span class="author-name">Andi Pratama</span>
+                                    <span class="author-role">CEO, TechCorp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <blockquote>
+                                "Amazing photographer! Umar captured our wedding day perfectly. The photos are beautiful and full of emotion. Thank you!"
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img 
+                                    src="assets/images/testimonials/client-2.jpg" 
+                                    alt="Client 2"
+                                    loading="lazy"
+                                    width="60"
+                                    height="60"
+                                >
+                                <div class="testimonial-info">
+                                    <span class="author-name">Siti Rahma</span>
+                                    <span class="author-role">Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <blockquote>
+                                "Working with Umar on our dashboard project was a great experience. His technical skills and attention to detail are impressive."
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img 
+                                    src="assets/images/testimonials/client-3.jpg" 
+                                    alt="Client 3"
+                                    loading="lazy"
+                                    width="60"
+                                    height="60"
+                                >
+                                <div class="testimonial-info">
+                                    <span class="author-name">Budi Santoso</span>
+                                    <span class="author-role">Product Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Previous testimonial">‹</button>
+                    <div class="slider-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="slider-next" aria-label="Next testimonial">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    CONTACT SECTION
+    ================================================================ -->
+    <section id="contact" class="section contact" aria-label="Contact Section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-label">Contact</span>
+                <h2>Let's Work Together</h2>
+                <p class="section-subtitle">Have a project in mind? Let's talk about it.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-form fade-in">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            <span class="form-error">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <span class="form-error">Please enter a valid email</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            <span class="form-error">Please enter your message</span>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info fade-in">
+                    <div class="contact-info-item">
+                        <span class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+628123456789">+62 812 3456 789</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:umar@example.com">umar@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Indonesia</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- ================================================================
+    FOOTER
+    ================================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">UM</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p>Building modern websites &amp; capturing meaningful moments.</p>
+                    <p class="footer-copyright">&copy; 2024 Umar Maulana. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Photography</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================================
+    BACK TO TOP
+    ================================================================ -->
+    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- ================================================================
+    JAVASCRIPT
+    ================================================================ -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/animation.js" defer></script>
+    <script src="assets/js/typing.js" defer></script>
+    <script src="assets/js/gallery.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
+</body>
+</html>

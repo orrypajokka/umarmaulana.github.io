@@ -1,0 +1,1039 @@
+/* ==========================================================================
+   PORTFOLIO UMAR MAULANA - RESPONSIVE STYLESHEET
+   Struktur: Desktop Large -> Desktop -> Laptop -> Tablet -> Mobile
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESKTOP LARGE (1200px - 1400px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-wrapper {
+        gap: var(--space-lg);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. DESKTOP (992px - 1200px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+        padding-inline: 20px;
+    }
+
+    :root {
+        --space-2xl: 80px;
+        --space-xl: 60px;
+        --space-lg: 36px;
+    }
+
+    /* Hero */
+    .hero-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+        min-height: auto;
+        padding-block: var(--space-xl);
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+    }
+
+    .hero-typing {
+        font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
+    }
+
+    .hero-image-wrapper {
+        max-width: 400px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Photography */
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-item:nth-child(1) { grid-row: span 1; }
+    .photo-item:nth-child(4) { grid-row: span 1; }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--space-lg);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. LAPTOP / TABLET LANDSCAPE (768px - 992px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+        padding-inline: 16px;
+    }
+
+    :root {
+        --space-2xl: 60px;
+        --space-xl: 48px;
+        --space-lg: 32px;
+        --space-md: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+        padding-block: 12px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-lg);
+        gap: var(--space-md);
+        transition: var(--transition-base);
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: var(--fs-h3);
+        color: var(--color-black);
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: 80px;
+    }
+
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        text-align: center;
+        padding-block: var(--space-xl) var(--space-lg);
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .about-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
+
+    .section-header h2 {
+        max-width: 100%;
+    }
+
+    .section-header.text-center h2 {
+        max-width: 100%;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .portfolio-filter {
+        justify-content: center;
+    }
+
+    /* Photography */
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xs);
+    }
+
+    .photo-categories {
+        justify-content: center;
+    }
+
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Experience */
+    .timeline {
+        padding-left: var(--space-md);
+    }
+
+    .timeline-item {
+        padding-left: var(--space-md);
+    }
+
+    .timeline-dot {
+        left: -6px;
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .contact-form {
+        order: 2;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .contact-info-item {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-lg);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    /* Lightbox */
+    .lightbox-prev,
+    .lightbox-next {
+        padding: 8px 12px;
+        font-size: 1.5rem;
+    }
+
+    .lightbox-prev { left: var(--space-sm); }
+    .lightbox-next { right: var(--space-sm); }
+
+    .lightbox-close {
+        top: var(--space-sm);
+        right: var(--space-sm);
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   4. TABLET PORTRAIT / MOBILE LANDSCAPE (576px - 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+        padding-inline: 16px;
+    }
+
+    :root {
+        --space-2xl: 48px;
+        --space-xl: 36px;
+        --space-lg: 24px;
+        --space-md: 16px;
+        --space-sm: 12px;
+    }
+
+    /* Typography */
+    .hero-title {
+        font-size: clamp(2rem, 5vw + 0.5rem, 2.8rem);
+    }
+
+    .hero-typing {
+        font-size: clamp(1rem, 3vw + 0.5rem, 1.5rem);
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+    }
+
+    /* Hero */
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        max-width: 280px;
+    }
+
+    .hero-image-badge {
+        bottom: var(--space-sm);
+        left: var(--space-sm);
+        padding: 6px 12px;
+        font-size: var(--fs-label);
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .stats .stat-number {
+        font-size: clamp(2rem, 4vw + 0.5rem, 2.8rem);
+    }
+
+    .stats .stat-desc {
+        font-size: var(--fs-label);
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xs);
+    }
+
+    .portfolio-info h3 {
+        font-size: var(--fs-small);
+    }
+
+    .portfolio-info p {
+        font-size: var(--fs-label);
+    }
+
+    .portfolio-tags span {
+        font-size: 0.65rem;
+        padding: 1px 8px;
+    }
+
+    .filter-btn,
+    .category-btn {
+        font-size: var(--fs-label);
+        padding: 6px 14px;
+    }
+
+    /* Photography */
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xs);
+    }
+
+    /* Skills */
+    .skill-name {
+        min-width: 80px;
+        font-size: var(--fs-small);
+    }
+
+    /* Experience */
+    .timeline-content {
+        padding: var(--space-sm);
+    }
+
+    .timeline-content h3 {
+        font-size: var(--fs-body);
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: var(--space-md);
+    }
+
+    .testimonial-card blockquote {
+        font-size: var(--fs-small);
+    }
+
+    .testimonial-author img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Contact */
+    .contact-form {
+        padding: var(--space-md);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: var(--fs-small);
+    }
+
+    .contact-info-item {
+        align-items: center;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social .social-links {
+        justify-content: center;
+    }
+
+    .footer-links ul {
+        align-items: center;
+    }
+
+    /* Lightbox */
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .lightbox-content img {
+        max-height: 80vh;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        display: none;
+    }
+
+    /* Back to top */
+    #backToTop {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: var(--space-sm);
+        right: var(--space-sm);
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-outline {
+        padding: 12px 24px;
+        font-size: var(--fs-small);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   5. MOBILE SMALL (320px - 576px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+    .container {
+        padding-inline: 12px;
+    }
+
+    :root {
+        --space-2xl: 36px;
+        --space-xl: 28px;
+        --space-lg: 20px;
+        --space-md: 14px;
+        --space-sm: 10px;
+    }
+
+    /* Typography */
+    .hero-title {
+        font-size: clamp(1.8rem, 6vw + 0.5rem, 2.4rem);
+    }
+
+    .hero-typing {
+        font-size: clamp(0.9rem, 3vw + 0.3rem, 1.2rem);
+    }
+
+    .hero-description {
+        font-size: var(--fs-small);
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.25rem, 4vw + 0.3rem, 1.75rem);
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+    /* Navbar */
+    .nav-links {
+        width: 100%;
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .nav-links a {
+        font-size: var(--fs-h3);
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    /* Hero */
+    .hero-image-wrapper {
+        max-width: 240px;
+    }
+
+    .hero-actions {
+        max-width: 100%;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-outline {
+        font-size: var(--fs-small);
+        padding: 10px 20px;
+    }
+
+    .hero-image-badge {
+        padding: 4px 10px;
+        font-size: 0.6rem;
+    }
+
+    .badge-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+    }
+
+    .stats .stat-number {
+        font-size: clamp(1.5rem, 5vw + 0.3rem, 2.2rem);
+    }
+
+    .stats .stat-label {
+        font-size: var(--fs-small);
+    }
+
+    .stats .stat-desc {
+        font-size: 0.6rem;
+    }
+
+    /* About */
+    .about-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-item .stat-number {
+        font-size: var(--fs-h3);
+    }
+
+    /* Services */
+    .service-card {
+        padding: var(--space-md);
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .service-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .service-card h3 {
+        font-size: var(--fs-body);
+    }
+
+    .service-features li {
+        font-size: 0.6rem;
+        padding: 2px 8px;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portfolio-thumbnail {
+        aspect-ratio: 16/10;
+    }
+
+    .view-project {
+        padding: 8px 16px;
+        font-size: var(--fs-label);
+    }
+
+    .portfolio-filter {
+        gap: var(--space-xs);
+    }
+
+    .filter-btn {
+        font-size: 0.65rem;
+        padding: 4px 12px;
+    }
+
+    /* Photography */
+    .photo-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+    }
+
+    .photo-categories {
+        gap: var(--space-xs);
+    }
+
+    .category-btn {
+        font-size: 0.65rem;
+        padding: 4px 12px;
+    }
+
+    /* Skills */
+    .skill-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .skill-name {
+        min-width: auto;
+        font-size: var(--fs-small);
+    }
+
+    .skill-bar {
+        height: 4px;
+    }
+
+    /* Experience */
+    .timeline {
+        padding-left: var(--space-sm);
+    }
+
+    .timeline-item {
+        padding-left: var(--space-sm);
+        padding-bottom: var(--space-md);
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
+        left: -5px;
+        top: 2px;
+    }
+
+    .timeline-date {
+        font-size: 0.6rem;
+    }
+
+    .timeline-content h3 {
+        font-size: var(--fs-small);
+    }
+
+    .timeline-company {
+        font-size: var(--fs-small);
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: var(--space-sm);
+    }
+
+    .testimonial-stars {
+        font-size: 1rem;
+    }
+
+    .testimonial-card blockquote {
+        font-size: var(--fs-small);
+        margin-bottom: var(--space-sm);
+    }
+
+    .testimonial-author img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .author-name {
+        font-size: var(--fs-small);
+    }
+
+    .author-role {
+        font-size: 0.6rem;
+    }
+
+    .slider-prev,
+    .slider-next {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot.active {
+        width: 20px;
+    }
+
+    /* Contact */
+    .contact-form {
+        padding: var(--space-sm);
+    }
+
+    .form-group {
+        margin-bottom: var(--space-sm);
+    }
+
+    .form-group label {
+        font-size: var(--fs-label);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 12px;
+        font-size: var(--fs-small);
+    }
+
+    .form-group textarea {
+        min-height: 80px;
+    }
+
+    .contact-info-item {
+        gap: var(--space-sm);
+    }
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .contact-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact-info-item h4 {
+        font-size: var(--fs-label);
+    }
+
+    .contact-info-item a,
+    .contact-info-item span {
+        font-size: var(--fs-small);
+    }
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-links a svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Footer */
+    .footer {
+        padding-block: var(--space-lg);
+    }
+
+    .footer-brand .logo {
+        margin-bottom: var(--space-xs);
+    }
+
+    .footer-brand p {
+        font-size: var(--fs-small);
+    }
+
+    .footer-copyright {
+        font-size: 0.6rem;
+    }
+
+    .footer-links h4,
+    .footer-social h4 {
+        font-size: var(--fs-label);
+    }
+
+    .footer-links a {
+        font-size: var(--fs-small);
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-outline {
+        padding: 10px 20px;
+        font-size: var(--fs-small);
+    }
+
+    /* Loading */
+    .loader span {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   6. VERY SMALL DEVICES (<= 360px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 360px) {
+    .container {
+        padding-inline: 8px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 5vw + 0.3rem, 1.8rem);
+    }
+
+    .hero-typing {
+        font-size: clamp(0.8rem, 2.5vw + 0.2rem, 1rem);
+    }
+
+    .hero-image-wrapper {
+        max-width: 200px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xs);
+    }
+
+    .stats .stat-number {
+        font-size: clamp(1.2rem, 4vw + 0.2rem, 1.8rem);
+    }
+
+    .portfolio-grid {
+        gap: var(--space-xs);
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+    }
+
+    .filter-btn,
+    .category-btn {
+        font-size: 0.6rem;
+        padding: 3px 10px;
+    }
+
+    .service-card {
+        padding: var(--space-sm);
+    }
+
+    .service-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .service-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   7. PRINT STYLES
+   -------------------------------------------------------------------------- */
+@media print {
+    .navbar,
+    .hero-scroll,
+    .slider-controls,
+    #backToTop,
+    #loading-screen {
+        display: none !important;
+    }
+
+    .section {
+        padding-block: var(--space-md) !important;
+        page-break-inside: avoid;
+    }
+
+    .hero {
+        min-height: auto !important;
+        padding-top: 60px !important;
+    }
+
+    .hero-wrapper {
+        min-height: auto !important;
+    }
+
+    .portfolio-overlay {
+        opacity: 1 !important;
+        background: none !important;
+        backdrop-filter: none !important;
+        position: static !important;
+    }
+
+    .portfolio-thumbnail {
+        aspect-ratio: auto !important;
+    }
+
+    .view-project {
+        display: none !important;
+    }
+
+    .lightbox {
+        display: none !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8. REDUCED MOTION PREFERENCE
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .typing-cursor {
+        animation: none !important;
+    }
+
+    .loader span {
+        animation: none !important;
+    }
+
+    .badge-dot {
+        animation: none !important;
+    }
+
+    .skill-progress {
+        transition: none !important;
+    }
+
+    .testimonial-track {
+        transition: none !important;
+    }
+}

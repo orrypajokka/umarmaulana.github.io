@@ -1,0 +1,14 @@
+# ============================================================================
+# ROBOTS.TXT - SEO & Crawler Instructions
+# ============================================================================
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /icons/
+
+# Sitemap location
+Sitemap: https://umarmaulana.com/sitemap.xml
+
+# Crawl delay (optional, be respectful)
+Crawl-delay: 1
